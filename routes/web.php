@@ -17,7 +17,9 @@ use App\Http\Controllers\HelloController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-
+Route::get('/welcome/{name?}/{id}', function ($name=null,$id=null) {
+    dd('Welcome '.$name);
+});
 
 
 Route::get('/hello/{name?}', [HelloController::class, 'welcome']);
